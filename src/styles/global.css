@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import url("./fonts.css");
+
+@theme {
+  --font-sans: 'Hanken Grotesk Variable', sans-serif;
+  --font-title: 'Roboto Condensed Variable';
+  --color-bbrand-50: oklch(97.08% 0.014 272.69);
+  --color-bbrand-100: oklch(68.15% 0.213459 39.9549);
+  --color-bbrand-200: oklch(73.02% 0.139 271.73);
+  --color-bbrand-300: oklch(60.84% 0.156 271.9);
+  --color-bbrand-400: oklch(48.73% 0.155 271.98);
+  --color-bbrand-500: oklch(36.8% 0.159 271.74);
+  --color-bbrand-600: oklch(33.69% 0.183 271.8);
+  --color-bbrand-700: oklch(29.4% 0.19 271.82);
+  --color-bbrand-800: oklch(24.94% 0.161 271.97);
+  --color-bbrand-900: oklch(21.04% 0.136 271.35);
+
+  --color-background: oklch(35.37% 0.2431 264.88);
+  --color-foreground: oklch(100% 0.0 0.0);
+  --color-accent: oklch(67.13% 0.1769 248.78);
+}
+
+@utility mx-spaced {
+  @apply mx-4 md:mx-8 lg:mx-12;
+}
+
+@utility px-spaced {
+  @apply px-4 md:px-8 lg:px-12;
+}
+
+
+@layer base {
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    display: flex;
+    flex-direction: column;
+    gap: calc(24px * 3);
+  }
+}

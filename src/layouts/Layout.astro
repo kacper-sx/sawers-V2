@@ -1,0 +1,85 @@
+---
+import Splash from "@/components/SplashScreen.astro";
+import "@/styles/global.css";
+import AppHeader from "@/components/AppHeader/AppHeader.astro";
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href="https://awgulewicz.com" />
+    <title>Chłodnictwo i Odnawialne Źródła Energii | Sawers Parczew</title>
+    <meta
+      name="description"
+      content="Kancelaria Radcy Prawnego Parczew Radca Prawny Łukasz Awgulewicz. Reprezentuję klientów świadcząc kompleksową pomoc prawną dla firm i osób fizycznych."
+    />
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Kancelaria Radcy Prawnego Radca Prawny Łukasz Awgulewicz",
+        "image": "https://awgulewicz.com/logo.svg",
+        "@id": "https://awgulewicz.com",
+        "url": "https://awgulewicz.com",
+        "telephone": "+48 501 133 734",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Strażacka 4",
+          "addressLocality": "Parczew",
+          "postalCode": "21-200",
+          "addressCountry": "PL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.64219913421423,
+          "longitude": 22.901119746025262
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:30",
+          "closes": "16:30"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Łukasz Awgulewicz"
+        },
+        "foundingDate": "2017-07-01",
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "propertyID": "NIP",
+            "value": "5391424786"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "REGON",
+            "value": "367642903"
+          }
+        ],
+        "description": "Kancelaria Radcy Prawnego w Parczewie, świadcząca kompleksową pomoc prawną dla firm i osób fizycznych.",
+        "email": "kancelaria@awgulewicz.com"
+      }
+    </script>
+  </head>
+  <body>
+    <AppHeader />
+    <Splash />
+    <slot />
+  </body>
+</html>
+
+<script>
+  import Lenis from "lenis";
+  declare global {
+    interface Window {
+      lenis: Lenis;
+    }
+  }
+  window.lenis = new Lenis({ autoRaf: true });
+</script>

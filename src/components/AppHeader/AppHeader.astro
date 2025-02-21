@@ -1,0 +1,59 @@
+---
+import MobileNav from "@/components/AppHeader/MobileNav.astro";
+import { navData } from "@/components/AppHeader/navData";
+---
+
+<header
+  class:list={[
+    "flex w-full fixed left-0 z-99 top-0 px-spaced items-center h-24 gap-12",
+    "[&>nav]:flex-1 [&>nav>ul]:flex [&>nav>ul]:items-center [&>nav>ul]:gap-12",
+    "[&>nav.dn]:lg:block [&>nav.dn]:hidden backdrop-blur-md",
+  ]}
+>
+  <nav class="dn">
+    <ul class="justify-end">
+      {
+        navData.slice(0, navData.length / 2).map(({ href, title }) => (
+          <li class="relative shrink-0 inline-flex items-center group transition overflow-clip font-bold px-4">
+            <a class:list={[""]} href={href}>
+              <span
+                aria-hidden="true"
+                class="absolute bottom-0 -left-full group-hover:left-0 w-full bg-bbrand-100 h-px transition-[left] inline-flex"
+              />
+              {title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <a
+    href="/"
+    class="text-center justify-center items-center border-2 rounded-2xl border-bbrand-100 px-3 py-1"
+  >
+    <span
+      style="text-shadow: #fff 0px 0px 30px;"
+      class="text-bbrand-100 bg-none font-bold text-4xl tracking-tight"
+    >
+      Sawers
+    </span>
+  </a>
+  <nav class="dn">
+    <ul>
+      {
+        navData.slice(navData.length / 2).map(({ href, title }) => (
+          <li class="relative shrink-0 inline-flex items-center group transition overflow-clip font-bold px-4">
+            <a class:list={[""]} href={href}>
+              <span
+                aria-hidden="true"
+                class="absolute bottom-0 -left-full group-hover:left-0 w-full bg-bbrand-100 h-px transition-[left] inline-flex"
+              />
+              {title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <MobileNav />
+</header>
