@@ -1,25 +1,32 @@
 ---
-import background from "@/assets/background.svg";
+import background from '@/assets/background.svg'
+import Breadcrumbs from '@/components/features/Breadcrumbs.astro'
 ---
 
 <section
-  class="flex w-full md:h-screen bg-center bg-cover px-spaced pt-28 xl:pt-36 items-center justify-center"
+  class='flex w-full md:h-screen bg-center bg-cover px-spaced pt-28 xl:pt-36 items-center justify-center'
   style={`background-image: url(${background.src})`}
 >
-  <div class="flex flex-col gap-12 justify-center items-center">
-    <h1 class="font-semibold text-center">
+  <div class='flex flex-col gap-12 justify-center items-center'>
+    <Breadcrumbs
+      breadcrumbs={[
+        { href: '/', children: 'Sawers' },
+        { href: '/kontakt', children: 'Kontakt' },
+      ]}
+    />
+    <h1 class='font-semibold text-center'>
       Kontakt do firmy Sawers Saweczko Robert
     </h1>
     <p
-      style="text-shadow: #ff5a02 0px 5px 30px;"
-      class="text-4xl xl:text-8xl font-bold text-bbrand-100 flex flex-col gap-4 text-center"
+      style='text-shadow: #ff5a02 0px 5px 30px;'
+      class='text-4xl xl:text-8xl font-bold text-bbrand-100 flex flex-col gap-4 text-center'
     >
       <span>ZA CIEPŁO? ZA ZIMNO?</span>
-      <span style="text-shadow: #199afc 0px 5px 30px;" class="text-accent"
+      <span style='text-shadow: #199afc 0px 5px 30px;' class='text-accent'
         >COŚ WYMYŚLIMY!</span
       >
     </p>
-    <p class="text-base xl:text-xl max-w-3xl text-center">
+    <p class='text-base xl:text-xl max-w-3xl text-center'>
       Jeśli szukasz nowoczesnych rozwiązań chłodniczych lub odnawialnych źródeł
       energii to jesteś w dobrym miejscu. Nasza oferta skierowana jest zarówno
       do klientów indywizualnych jak i dużych przedsiębiorstw. Oferujemy
