@@ -1,11 +1,11 @@
 ---
-import background from "../assets/background.svg";
+import background from '../assets/background.svg'
 ---
 
-<div id="splash">
+<div id='splash' class='px-spaced text-center'>
   <span
-    style="text-shadow: #fff 0px 0px 30px;"
-    class="text-bbrand-100 bg-none font-bold text-7xl tracking-tight text-center"
+    style='text-shadow: #fff 0px 0px 30px;'
+    class='text-bbrand-100 bg-none font-bold text-4xl tracking-tight text-center'
   >
     Sawers
   </span>
@@ -40,7 +40,7 @@ import background from "../assets/background.svg";
 
   #splash p {
     font-weight: 900;
-    font-family: "Roboto Condensed Variable", sans-serif;
+    font-family: 'Roboto Condensed Variable', sans-serif;
     font-size: 3rem;
     color: var(--color-bbrand-100);
   }
@@ -48,21 +48,21 @@ import background from "../assets/background.svg";
 
 <script>
   function main() {
-    const splash = document.querySelector("#splash");
-    splash?.animate([{ transform: "translateY(-100%)" }], {
+    const splash = document.querySelector('#splash')
+    splash?.animate([{ transform: 'translateY(-100%)' }], {
       duration: 800,
       iterations: 1,
-      fill: "forwards",
-      easing: "cubic-bezier(0.5, 1, 0.89, 1)",
-    });
+      fill: 'forwards',
+      easing: 'cubic-bezier(0.5, 1, 0.89, 1)',
+    })
   }
-  const s = new Date().getTime();
+  const s = new Date().getTime()
   function afterLoaded() {
     if (Array.from(document.images).every((i) => i.complete)) {
-      setTimeout(main, Math.max(new Date().getTime() - s, 350));
+      setTimeout(main, Math.max(new Date().getTime() - s, 350))
     } else {
-      setTimeout(afterLoaded, 150);
+      setTimeout(afterLoaded, 150)
     }
   }
-  afterLoaded();
+  afterLoaded()
 </script>

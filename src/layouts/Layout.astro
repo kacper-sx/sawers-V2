@@ -2,6 +2,7 @@
 import Splash from '@/components/SplashScreen.astro'
 import '@/styles/global.css'
 import AppHeader from '@/components/AppHeader/AppHeader.astro'
+import SplashScreen from '@/components/SplashScreen.astro'
 
 export interface Props {
   title: string
@@ -65,8 +66,9 @@ const { title, description, cannonical, keywords } = Astro.props as Props
     </script>
   </head>
   <body>
-    <AppHeader />
     <Splash />
+    <AppHeader />
+
     <slot />
   </body>
 </html>

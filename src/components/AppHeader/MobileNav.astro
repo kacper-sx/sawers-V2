@@ -1,19 +1,19 @@
 ---
-import Button from "@/components/Button.astro";
-import { navData } from "@/components/AppHeader/navData";
+import Button from '@/components/Button.astro'
+import { navData } from '@/components/AppHeader/navData'
 ---
 
-<nav aria-label="Nawigacja" class="lg:hidden flex justify-end relative z-100">
+<nav aria-label='Nawigacja' class='lg:hidden flex justify-end relative z-100'>
   <button
-    class="peer group p-4"
-    aria-controls="nav-menu"
-    aria-expanded="false"
-    type="button"
+    class='peer group p-4'
+    aria-controls='nav-menu'
+    aria-expanded='false'
+    type='button'
   >
     <span
-      class="size-8 *:inline-flex flex flex-col gap-2 *:w-full *:transition *:h-1 *:bg-bbrand-100"
+      class='size-8 *:inline-flex flex flex-col gap-2 *:w-full *:transition *:h-1 *:bg-bbrand-100'
     >
-      <span class="sr-only">Menu</span>
+      <span class='sr-only'>Menu</span>
       <span
         class="mobile-nav__toggle-bar group-[[aria-expanded='true']]:rotate-45 group-[[aria-expanded='true']]:w-[111%] origin-top-left"
       ></span>
@@ -27,18 +27,18 @@ import { navData } from "@/components/AppHeader/navData";
   </button>
 
   <div
-    id="nav-menu"
+    id='nav-menu'
     class:list={[
-      "hidden starting:opacity-0 starting:scale-110 duration-500",
-      "peer-[[aria-expanded='true']]:block z-10 ",
-      "bg-background shadow-lg p-8 shadow-foreground/10 rounded-3xl transition w-full absolute top-16 right-4 z-20",
+      'hidden starting:opacity-0 starting:scale-110 duration-500',
+      "peer-[[aria-expanded='true']]:block z-10",
+      'bg-background shadow-lg p-5 shadow-foreground/10 rounded-3xl transition w-[300px] md:w-[500px] absolute top-16 right-4 z-20',
     ]}
   >
-    <ul class="flex flex-col gap-2 items-center justify-center !text-3xl">
+    <ul class='flex flex-col gap-8 items-center justify-center !text-2xl'>
       {
         navData.map(({ title, href }) => (
           <li>
-            <Button scHref={href}>{title}</Button>
+            <a href={href}>{title}</a>
           </li>
         ))
       }
@@ -49,25 +49,24 @@ import { navData } from "@/components/AppHeader/navData";
 <style></style>
 <script>
   function main() {
-    const trigger = document.querySelector("[aria-controls='nav-menu']");
-    if (!(trigger instanceof HTMLButtonElement)) throw new Error("WTF");
+    const trigger = document.querySelector("[aria-controls='nav-menu']")
+    if (!(trigger instanceof HTMLButtonElement)) throw new Error('WTF')
 
-    trigger.addEventListener("click", () => {
-      trigger.ariaExpanded =
-        trigger.ariaExpanded === "false" ? "true" : "false";
-    });
+    trigger.addEventListener('click', () => {
+      trigger.ariaExpanded = trigger.ariaExpanded === 'false' ? 'true' : 'false'
+    })
 
     // ---
 
     const btns = document.querySelectorAll(
-      "div#nav-menu button[data-nav-button]",
-    );
+      'div#nav-menu button[data-nav-button]',
+    )
     for (const btn of btns) {
-      btn.addEventListener("click", () => {
-        trigger.ariaExpanded = "false";
-      });
+      btn.addEventListener('click', () => {
+        trigger.ariaExpanded = 'false'
+      })
     }
   }
 
-  main();
+  main()
 </script>

@@ -1,0 +1,22 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+type Props = HTMLAttributes<'div'>
+
+const { class: className, ...props } = Astro.props
+---
+
+<div class='relative inline-flex overflow-hidden rounded-full p-[2px]'>
+  <span
+    class='absolute inset-[-1000%] motion-safe:animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,hsl(var(--primary)/0.5)_0%,hsl(var(--primary)/0.5)_50%,hsl(var(--primary))_100%)]'
+  ></span>
+  <span
+    {...props}
+    class:list={[
+      'inline-flex h-full w-full items-center justify-center rounded-full bg-bbrand-200 text-white backdrop-blur-3xl',
+      className,
+    ]}
+  >
+    <slot />
+  </span>
+</div>
