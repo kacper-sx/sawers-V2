@@ -1,52 +1,52 @@
 ---
-import AnimatedNumbers from '@/components/features/Numbers'
-import MissionCard from '@/components/features/MissionCard.astro'
+import MissionCard from "@/components/features/MissionCard.astro";
+import AnimatedNumbers from "@/components/features/Numbers";
 
 const MissionData = [
   {
-    name: 'innowacja',
-    icon: 'lucide:server',
+    name: "Innowacyjność",
+    icon: "lucide:server",
   },
   {
-    name: 'innowacja',
-    icon: 'lucide:server',
+    name: "Terminowość",
+    icon: "lucide:calendar",
   },
   {
-    name: 'innowacja',
-    icon: 'lucide:server',
+    name: "Trwałe relacje",
+    icon: "lucide:server",
   },
   {
-    name: 'innowacja',
-    icon: 'lucide:server',
+    name: "Jakość i profesjonalizm",
+    icon: "lucide:server",
   },
   {
-    name: 'innowacja',
-    icon: 'lucide:server',
+    name: "Konkurencyjne ceny",
+    icon: "lucide:hand-coins",
   },
-]
+];
 ---
 
 <section
-  class='flex flex-col xl:flex-row gap-8 py-8 xl:py-16 px-spaced items-center justify-center'
+  class="flex flex-col xl:flex-row gap-8 py-8 xl:py-16 px-spaced items-center justify-center"
 >
-  <div class='flex flex-col gap-8 items-center justify-center w-full'>
-    <h2 class='font-semibold text-center text-3xl lg:text-6xl'>
+  <div class="flex flex-col gap-8 items-center justify-center w-full">
+    <h2 class="font-semibold text-center text-3xl lg:text-6xl">
       Kilka słów o nas
     </h2>
     <AnimatedNumbers client:idle />
   </div>
-  <div class='flex flex-col gap-8 items-center justify-center'>
-    <h3 class='font-semibold text-center text-2xl lg:text-4xl'>
+  <div class="flex flex-col gap-8 items-center justify-center">
+    <h3 class="font-semibold text-center text-2xl lg:text-4xl">
       Misja i wartości firmy
     </h3>
-    <div class='flex flex-col gap-4 w-full'>
-      <p class='text-center'>
+    <div class="flex flex-col gap-4 w-full">
+      <p class="text-center">
         Misją firmy jest podnoszczenie komfortu życia, poprzez stosowanie
         przyjaznych dla środowiska technologii chłodnicznych i cieplnych, dzięki
         którym użytkowanie nieruchomości staje się przyjemniejsze.
       </p>
       <div
-        class='xl:flex xl:flex-wrap grid grid-cols md:grid-cols-2 items-center justify-center'
+        class="xl:flex xl:flex-wrap grid grid-cols md:grid-cols-2 items-center justify-center shadow-2xl"
       >
         {
           MissionData.map((mission) => (
