@@ -4,10 +4,10 @@
 @theme {
   --font-sans: 'Hanken Grotesk Variable', sans-serif;
   --font-title: 'Roboto Condensed Variable';
-  --color-bbrand-50: oklch(97.08% 0.014 272.69);
+  --color-bbrand-50: oklch(25.62% 0 0);
   --color-bbrand-100: oklch(68.15% 0.213459 39.9549);
   --color-bbrand-200: oklch(21.01% 0.0318 264.66);
-  --color-bbrand-300: oklch(60.84% 0.156 271.9);
+  --color-bbrand-300: oklch(35.37% 0.2431 264.88);
   --color-bbrand-400: oklch(48.73% 0.155 271.98);
   --color-bbrand-500: oklch(36.8% 0.159 271.74);
   --color-bbrand-600: oklch(33.69% 0.183 271.8);
@@ -16,8 +16,9 @@
   --color-bbrand-900: oklch(21.04% 0.136 271.35);
   --primary: 20 100% 50%;
 
-  --color-background: oklch(35.37% 0.2431 264.88);
+  --color-background: oklch(12.88% 0.0406 264.7);
   --color-foreground: oklch(100% 0.0 0.0);
+  --color-border: oklch(33.68% 0 0);
   --color-accent: oklch(67.13% 0.1769 248.78);
 }
 

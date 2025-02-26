@@ -1,0 +1,19 @@
+---
+import { Icon } from 'astro-icon/components'
+import type { HTMLAttributes } from 'astro/types'
+
+type Props = HTMLAttributes<'div'> & {
+  name: string
+}
+const { name, class: className, ...props } = Astro.props
+---
+
+<div
+  {...props}
+  class='xl:w-1/3 py-4 px-4 flex justify-center gap-5 items-center flex-col aspect-[2/1] relative border border-border w-full'
+>
+  <Icon name={name} class='size-8 xl:size-12 text-bbrand-100' />
+  <p>
+    <slot />
+  </p>
+</div>
