@@ -1,0 +1,43 @@
+---
+import MainOffferCard from '@/components/features/MainOffferCard.astro'
+
+const MainOfferData = [
+  {
+    title: 'Klimatyzacja',
+    href: '/klimatyzacja',
+    icon: 'lucide:air-vent',
+    description: 'Klimatyzacja split do mieszkania z montażem.',
+  },
+  {
+    title: 'Pompy ciepła',
+    href: '/pompy-ciepla',
+    icon: 'lucide:heater',
+    description: 'Pompy ciepła do grzania pomieszczeń i wody.',
+  },
+  {
+    title: 'Fotowoltaika',
+    href: '/fotowoltaika',
+    icon: 'lucide:battery-charging',
+    description: 'Instalacje fotowoltaiczne dachowe i gruntowe.',
+  },
+  {
+    title: 'Monitoring',
+    href: '/monitoring',
+    icon: 'lucide:cctv',
+    description: 'Monitoring i telewizja przemysłowa z konfiguracją.',
+  },
+]
+---
+
+<section
+  class='flex flex-col gap-8 py-8 xl:py-16 px-spaced items-center justify-center'
+>
+  <h2 class='font-semibold text-center text-3xl lg:text-6xl'>
+    Nie tylko chłodnictwo - oferta Sawers
+  </h2>
+  <div
+    class='flex flex-col gap-8 items-center justify-center md:flex-row md:flex-wrap w-full'
+  >
+    {MainOfferData.map((offer) => <MainOffferCard {...offer} />)}
+  </div>
+</section>

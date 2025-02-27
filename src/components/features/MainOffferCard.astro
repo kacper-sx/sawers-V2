@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon/components'
+
+export interface Props {
+  title: string
+  description: string
+  icon: string
+  href: string
+}
+
+const { title, description, href, icon } = Astro.props as Props
+---
+
+<a
+  href={href}
+  class='flex flex-col bg-bbrand-50 p-5 rounded-2xl gap-8 shadow-[4px_4px_0px_rgba(255,90,2)] transition-all group duration-200 hover:shadow-[10px_10px_0px_rgba(255,90,2)]'
+>
+  <div
+    class='flex justify-center size-14 rounded-full items-center transition-all duration-200 bg-background shadow-[2px_2px_0px_rgba(255,90,2)] group-hover:shadow-[6px_6px_0px_rgba(255,90,2)]'
+  >
+    <Icon name={icon} class='size-8 text-bbrand-100' />
+  </div>
+  <h3
+    style='text-shadow: #199afc 0px 5px 10px;'
+    class='font-semibold text-3xl text-accent'
+  >
+    {title}
+  </h3>
+  <p class='max-w-xs'>{description}</p>
+</a>

@@ -15,6 +15,7 @@ export default defineConfig({
       include: {
         lucide: [
           "arrow-up-right",
+          "chevrons-right",
           "phone",
           "menu",
           "scroll",
@@ -27,8 +28,11 @@ export default defineConfig({
           "calendar-clock",
           "hand-coins",
           "calendar",
-          "drum",
+          "heater",
           "server",
+          'air-vent',
+          "battery-charging",
+          "cctv"
         ],
       },
     }), react()]
