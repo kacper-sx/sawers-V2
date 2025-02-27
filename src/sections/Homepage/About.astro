@@ -29,13 +29,17 @@ const MissionData = [
 <section
   class="flex flex-col xl:flex-row gap-8 py-8 xl:py-16 px-spaced items-center justify-center"
 >
-  <div class="flex flex-col gap-8 items-center justify-center w-full">
-    <h2 class="font-semibold text-center text-3xl lg:text-6xl">
+  <div
+    class="flex flex-col gap-8 items-center justify-center w-full intersect:animate-fade-in-scale intersect-once"
+  >
+    <h2 class="font-semibold text-center text-3xl lg:text-6xl gradient-text">
       Kilka słów o nas
     </h2>
     <AnimatedNumbers client:idle />
   </div>
-  <div class="flex flex-col gap-8 items-center justify-center">
+  <div
+    class="flex flex-col gap-8 items-center justify-center intersect:animate-fade-in-scale intersect-once delay-300"
+  >
     <h3 class="font-semibold text-center text-2xl lg:text-4xl">
       Misja i wartości firmy
     </h3>

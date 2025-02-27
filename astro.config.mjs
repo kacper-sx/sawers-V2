@@ -15,7 +15,7 @@ export default defineConfig({
       include: {
         lucide: [
           "arrow-up-right",
-          "chevrons-right",
+          "chevron-right",
           "phone",
           "menu",
           "scroll",
