@@ -1,6 +1,7 @@
 ---
 import background from '@/assets/background.svg'
 import Breadcrumbs from '@/components/features/Breadcrumbs.astro'
+import Pill from '@/components/features/Pill.astro'
 ---
 
 <section
@@ -17,18 +18,23 @@ import Breadcrumbs from '@/components/features/Breadcrumbs.astro'
     <h1 class='font-semibold text-center'>Fotowoltaika Parczew</h1>
     <p
       style='text-shadow: #ff5a02 0px 5px 30px;'
-      class='text-4xl xl:text-8xl font-bold text-bbrand-100 flex flex-col gap-4 text-center'
+      class='text-3xl xl:text-6xl font-bold text-bbrand-100 flex flex-col gap-4 text-center'
     >
-      <span>ZA CIEPŁO? ZA ZIMNO?</span>
+      <span>ZA DUŻE RACHUNKI ZA PRĄD?</span>
       <span style='text-shadow: #199afc 0px 5px 30px;' class='text-accent'
-        >COŚ WYMYŚLIMY!</span
+        >Z FOTOWOLTAIKĄ ZAPŁACISZ MNIEJ!</span
       >
     </p>
     <p class='text-base xl:text-xl max-w-3xl text-center'>
-      Jeśli szukasz nowoczesnych rozwiązań chłodniczych lub odnawialnych źródeł
-      energii to jesteś w dobrym miejscu. Nasza oferta skierowana jest zarówno
-      do klientów indywizualnych jak i dużych przedsiębiorstw. Oferujemy
-      wyłącznie produkty wiodących producentów w branży chłodniczej i OZE.
+      Patrząc na rachunni za prąd masz dość? Fotowoltaika to idealne
+      rozwiązanie, zarówno dla domów mieszkalnych jak i budunków firmowych.
+      Oferujemy doradztwo i profesjonalny montaż instalacji fotowoltaicznych.
+      Inwestycja zwraca się już po kilku latach!
     </p>
+    <a href='/kontakt'>
+      <Pill class='flex items-center rounded-full gap-4 px-4 xl:px-8 py-3'>
+        Skontakuj się
+      </Pill>
+    </a>
   </div>
 </section>

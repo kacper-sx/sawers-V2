@@ -1,6 +1,7 @@
 ---
 import background from '@/assets/background.svg'
 import Breadcrumbs from '@/components/features/Breadcrumbs.astro'
+import Pill from '@/components/features/Pill.astro'
 ---
 
 <section
@@ -19,18 +20,22 @@ import Breadcrumbs from '@/components/features/Breadcrumbs.astro'
     </h1>
     <p
       style='text-shadow: #ff5a02 0px 5px 30px;'
-      class='text-4xl xl:text-8xl font-bold text-bbrand-100 flex flex-col gap-4 text-center'
+      class='text-3xl xl:text-6xl font-bold text-bbrand-100 flex flex-col gap-4 text-center'
     >
-      <span>ZA CIEPŁO? ZA ZIMNO?</span>
+      <span>BEZPIECZNY DOM GDY NIKOGO NIE MA?</span>
       <span style='text-shadow: #199afc 0px 5px 30px;' class='text-accent'
-        >COŚ WYMYŚLIMY!</span
+        >MONITORING TO GWARANCJA 24/7!</span
       >
     </p>
     <p class='text-base xl:text-xl max-w-3xl text-center'>
-      Jeśli szukasz nowoczesnych rozwiązań chłodniczych lub odnawialnych źródeł
-      energii to jesteś w dobrym miejscu. Nasza oferta skierowana jest zarówno
-      do klientów indywizualnych jak i dużych przedsiębiorstw. Oferujemy
-      wyłącznie produkty wiodących producentów w branży chłodniczej i OZE.
+      Często wyjeżdżasz i zostawiasz dom lub inne miejsce bez opieki? Chcesz
+      wiedzieć co się dzieje na posesji, w każdej chwili i z dowolnego miejsca w
+      kraju? Wypróbuj oferowany u nas system monitoringu!
     </p>
+    <a href='/kontakt'>
+      <Pill class='flex items-center rounded-full gap-4 px-4 xl:px-8 py-3'>
+        Skontakuj się
+      </Pill>
+    </a>
   </div>
 </section>
