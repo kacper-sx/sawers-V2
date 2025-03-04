@@ -8,7 +8,7 @@ import { Image } from 'astro:assets'
 ---
 
 <section
-  class='flex flex-col xl:flex-row gap-16 w-full md:h-screen bg-center bg-cover px-spaced pb-30 xl:pb-36 items-center justify-center overflow-hidden rotate-180'
+  class='flex flex-col xl:flex-row gap-8 xl:gap-16 w-full md:h-screen bg-center bg-cover px-spaced pb-30 xl:pb-36 items-center justify-center overflow-hidden rotate-180'
   style={`background-image: url(${background.src})`}
 >
   <div
@@ -32,7 +32,7 @@ import { Image } from 'astro:assets'
     />
   </div>
   <div
-    class='flex flex-col gap-12 items-start rotate-180 intersect:animate-fade-in-scale-index intersect-once'
+    class='flex flex-col xl:gap-12 gap-8 items-center xl:items-start rotate-180 intersect:animate-fade-in-scale-index intersect-once'
   >
     <Breadcrumbs
       breadcrumbs={[
@@ -58,7 +58,7 @@ import { Image } from 'astro:assets'
       kraju? Wypróbuj oferowany u nas system monitoringu!
     </p>
     <div
-      class='flex gap-4 text-2xl font-semibold w-full justify-center items-center lg:justify-start'
+      class='flex gap-4 text-2xl font-semibold w-full justify-center items-center xl:justify-start'
     >
       <a href='/fotowoltaika#pricing'>
         <Pill class='flex items-center rounded-full gap-4 px-4 xl:px-8 py-3'>

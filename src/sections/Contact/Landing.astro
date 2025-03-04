@@ -4,10 +4,12 @@ import Breadcrumbs from '@/components/features/Breadcrumbs.astro'
 ---
 
 <section
-  class='flex w-full md:h-screen bg-center bg-cover px-spaced pt-28 xl:pt-36 items-center justify-center'
+  class='flex flex-col xl:flex-row gap-16 w-full md:h-screen bg-center bg-cover px-spaced py-30 xl:py-36 items-center justify-center overflow-hidden'
   style={`background-image: url(${background.src})`}
 >
-  <div class='flex flex-col gap-12 justify-center items-center'>
+  <div
+    class='flex flex-col gap-8 items-center xl:gap-12 xl:items-start intersect:animate-fade-in-scale-index intersect-once w-full'
+  >
     <Breadcrumbs
       breadcrumbs={[
         { href: '/', children: 'Sawers' },
@@ -19,18 +21,48 @@ import Breadcrumbs from '@/components/features/Breadcrumbs.astro'
     </h1>
     <p
       style='text-shadow: #ff5a02 0px 5px 30px;'
-      class='text-4xl xl:text-8xl font-bold text-bbrand-100 flex flex-col gap-4 text-center'
+      class='text-3xl xl:text-6xl font-bold text-bbrand-100 flex flex-col gap-4 text-center xl:text-start'
     >
-      <span>ZA CIEPŁO? ZA ZIMNO?</span>
+      <span>SERDECZNIE ZAPRASZAMY</span>
       <span style='text-shadow: #199afc 0px 5px 30px;' class='text-accent'
-        >COŚ WYMYŚLIMY!</span
+        >DO KONTAKTU</span
       >
     </p>
-    <p class='text-base xl:text-xl max-w-3xl text-center'>
-      Jeśli szukasz nowoczesnych rozwiązań chłodniczych lub odnawialnych źródeł
-      energii to jesteś w dobrym miejscu. Nasza oferta skierowana jest zarówno
-      do klientów indywizualnych jak i dużych przedsiębiorstw. Oferujemy
-      wyłącznie produkty wiodących producentów w branży chłodniczej i OZE.
-    </p>
+    <address
+      class='not-italic flex flex-col gap-6 text-xl shadow-xl shadow-accent font-semibold xl:text-3xl text-bbrand-100 bg-bbrand-50 rounded-2xl p-6'
+    >
+      <div class=''>
+        <div class='mb-3' style='text-shadow: #ff5a02 0px 5px 20px;'>
+          <span>e-mail:</span>
+          <a href='mailto:ser2332@wp.pl'>ser2332@wp.pl</a>
+        </div>
+        <div style='text-shadow: #ff5a02 0px 5px 20px;'>
+          <span> telefon: </span>
+          <a href='tel:+48606136448'>+48606136448</a>
+        </div>
+      </div>
+
+      <div class='space-y-3'>
+        <div style='text-shadow: #ff5a02 0px 5px 20px;'>
+          <p>godziny pracy: 08:00 - 18:00</p>
+
+          <span
+            style='text-shadow: #199afc 0px 2px 10px;'
+            class='!text-accent !text-base'>(poniedziałek - piątek)</span
+          >
+        </div>
+        <div style='text-shadow: #ff5a02 0px 5px 20px;'>
+          <p>NIP: 9541523286</p>
+        </div>
+      </div>
+    </address>
   </div>
+  <iframe
+    class='w-full h-full intersect:animate-fade-in-scale-index intersect-once'
+    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2475.8891457162504!2d22.906623776970815!3d51.6435552007473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x82bdff0b6c8da06d%3A0xf53188f64697122e!2sSawers%20Saweczko%20Robert!5e0!3m2!1spl!2spl!4v1741067492748!5m2!1spl!2spl'
+    style='border:0;'
+    allowfullscreen=''
+    loading='eager'
+    title='Sawers Saweczko Robert'
+    referrerpolicy='no-referrer-when-downgrade'></iframe>
 </section>
