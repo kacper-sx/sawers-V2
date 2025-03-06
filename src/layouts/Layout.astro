@@ -21,18 +21,40 @@ const { title, description, cannonical, keywords } = Astro.props as Props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={cannonical} />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:title" content={"SAWERS Saweczko Robert"} />
+    <meta
+      property="og:description"
+      content={"SAWERS Saweczko Robert - instalacje chłodnicze, montaż klimatyzacji i pomp ciepła, fotowoltaika i telewizja przemysłowa."}
+    />
+    <meta property="og:url" content={"https://sawers.pl"} />
+    <meta property="og:image" content={"https://sawers.pl/og-image.png"} />
+    <meta property="og:locale" content={"pl"} />
+
+    <meta name="DC.identifier" content="https://sawers.pl" />
+    <meta name="DC.creator" content="Kacper Saweczko" />
+    <meta name="DC.language" content="pl" />
+    <meta name="DC.type" content="website" />
+    <meta name="DC.format" content="text/html" />
+    <meta name="DC.rights" content="SAWERS Saweczko Robert" />
+    <meta
+      name="DC.subject"
+      content={"SAWERS Saweczko Robert - instalacje chłodnicze, montaż klimatyzacji i pomp ciepła, fotowoltaika i telewizja przemysłowa."}
+    />
     <script is:inline type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LegalService",
         "name": "Sawers Parczew",
-        "image": "https://sawers.pl/logo.svg",
+        "image": "https://sawers.pl/logo.ico",
         "@id": "https://sawers.pl",
         "url": "https://sawers.pl",
         "telephone": "+48 662 630 912",
