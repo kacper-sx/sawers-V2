@@ -1,0 +1,152 @@
+---
+import { Picture } from 'astro:assets'
+import P1 from '@/assets/air-conditioning/klimatyzacja-zewnetrzne.avif'
+---
+
+<section class='relative grid lg:grid-cols-2 px-spaced gap-8'>
+  <div
+    class='lg:sticky top-32 h-fit grid bg-bbrand-50 shadow-lg lg:shadow-2xl shadow-accent p-4 lg:p-16 rounded-2xl intersect:animate-fade-in-scale-index intersect-once'
+  >
+    <Picture
+      src={P1}
+      alt='Jednostki zewenętrzne klimatyzatorów stacjonarnych typu split, zamontowane na elewacji budynku.'
+      formats={['avif', 'webp']}
+      widths={[400, 800, 1200]}
+      sizes={`
+      (max-width: 1280px) 400px,
+      (max-width: 1536px) 800px,
+      1200px
+    `}
+      class={'rounded-2xl double-brand-clip'}
+      loading={'lazy'}
+    />
+  </div>
+  <div
+    class='flex flex-col place-self-end gap-16 max-w-3xl intersect:animate-fade-in-scale-index intersect-once'
+  >
+    <article>
+      <header>
+        <h2>
+          Klimatyzacja do pomieszczeń mieszkalnych i biurowych Parczew - jakie
+          rodzaje montujemy?
+        </h2>
+      </header>
+
+      <p>
+        Od dłuższego czasu dostarczamy klientom specjalistyczne i niezawodne <strong
+          >stacjonarne klimatyzatory inwerterowe</strong
+        >. Są to wyjątkowo <strong>energooszczędne klimatyzatory</strong>, które
+        stosowane są do pomieszczeń o zmiennych obciążeniach cieplnych. W
+        systemach bezpośredniego odparowania możemy zaoferować popularne
+        rozwiązania.
+      </p>
+      <div class='flex flex-col gap-5'>
+        <h3>Klimatyzacja split</h3>
+        <p>
+          Systemy klimatyzacji typu split składają się z dwóch modułów:
+          jednostki zewnętrznej i wewnętrznej, połączonych instalacją
+          elektryczną oraz rurami miedzianymi. Dzięki swojej kompaktowej budowie
+          i optymalnej wydajności, doskonale nadają się do mieszkań oraz
+          niewielkich domów, zapewniając skuteczne chłodzenie i komfort
+          użytkowania.
+        </p>
+        <h3>Klimatyzacja multi-split</h3>
+        <p>
+          Systemy klimatyzacji typu multi-split składają się z jednej jednostki
+          zewnętrznej, do której można podłączyć do pięciu jednostek
+          wewnętrznych za pomocą instalacji elektrycznej i miedzianych rur.
+          Dzięki swojej średniej mocy są idealnym rozwiązaniem do większych
+          przestrzeni lub kilku mniejszych pomieszczeń, zapewniając efektywne i
+          elastyczne chłodzenie.
+        </p>
+      </div>
+    </article>
+    <article>
+      <header>
+        <h2>
+          Sprzedaż i montaż klimatyzacji split Parczew - wszystko co musisz
+          wiedzieć
+        </h2>
+      </header>
+
+      <p>
+        <strong>Montaż klimatyzacji typu split</strong> składa się z kilku etapów
+        i zazwyczaj trwa od kilku do kilkunastu godzin, w zależności od stopnia skomplikowania
+        instalacji. Proces rozpoczyna się od wyboru odpowiedniego miejsca na jednostkę
+        wewnętrzną i zewnętrzną, tak aby zapewnić optymalną cyrkulację powietrza
+        oraz wygodny dostęp do urządzenia. Następnie technicy wiercą otwór w ścianie,
+        przez który przeprowadza się instalację rurową z miedzi oraz przewody elektryczne
+        łączące oba moduły. Kolejnym krokiem jest montaż jednostek, podłączenie przewodów
+        oraz wykonanie próby szczelności układu chłodniczego. Po upewnieniu się,
+        że wszystko działa prawidłowo, klimatyzator jest uruchamiany i testowany.
+        Ważne jest, aby instalację przeprowadzał certyfikowany specjalista, ponieważ
+        niewłaściwy montaż może prowadzić do wycieków czynnika chłodniczego lub nieefektywnej
+        pracy urządzenia.
+      </p>
+    </article>
+    <article>
+      <header>
+        <h2>Ile kosztuje klimatyzacja z montażem w Parczewie?</h2>
+      </header>
+      <p>
+        <strong>Cena klimatyzacji z montażem</strong> zależy od kilku kluczowych
+        czynników. Rodzaj klimatyzatora jest jednym z najważniejszych elementów wpływających
+        na koszt; klimatyzatory ścienne są najtańsze, podczas gdy systemy kanałowe
+        i multisplit są droższe. Moc urządzenia również wpływa na cenę, im większa
+        moc, tym wyższy koszt5. Dodatkowo, złożoność instalacji, w tym długość przewodów
+        i konieczność integracji z innymi systemami, może podnieść koszty. W 2025
+        roku średnia cena klimatyzacji z montażem waha się od około 4 500 do 15 000
+        zł netto, w zależności od typu systemu i skomplikowania instalacji.
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bbrand-50);
+    gap: 32px;
+    align-items: start;
+    padding: 32px;
+    border-radius: 16px;
+  }
+
+  h2 {
+    font-weight: 600; /* font-semibold */
+    color: var(--color-accent);
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    text-shadow: #199afc 0px 0px 20px;
+    max-width: 48rem; /* max-w-3xl */
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    h3 {
+      font-size: 1.5rem;
+      line-height: 1.1;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  h3 {
+    font-weight: 600; /* font-semibold */
+    color: var(--color-bbrand-100);
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-shadow: #ff5a02 0px 0px 20px;
+    max-width: 48rem; /* max-w-3xl */
+  }
+
+  p {
+    font-size: 1rem;
+  }
+</style>
