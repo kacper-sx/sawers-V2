@@ -1,20 +1,31 @@
 ---
-import Landing from '@/sections/AirCondition/Landing.astro'
-import Layout from '../layouts/Layout.astro'
-import SeoV1 from '@/sections/AirCondition/SeoV1.astro'
-import SeoV2 from '@/sections/AirCondition/SeoV2.astro'
+import AnimatedSectio from "@/components/AnimatedSectio.astro";
+import Landing from "@/sections/AirCondition/Landing.astro";
+import SeoV1 from "@/sections/AirCondition/SeoV1.astro";
+import SeoV2 from "@/sections/AirCondition/SeoV2.astro";
+import Layout from "../layouts/Layout.astro";
+
+import co1 from "@/assets/homepage/klimatyzacja1.webp";
+
+const items = [
+  { text: "Dobór urządzeń", img: co1 },
+  { text: "Sprzedaż klimatyzacji", img: co1 },
+  { text: "Montaż klimatyzacji", img: co1 },
+  { text: "Konserwacja klimatyzacji", img: co1 },
+];
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout
-  title='Klimatyzacja i montaż klimatyzacji | Sawers Parczew'
-  description='Klimatyzacja Parczew - Zapewniamy profesjonalny montaż klimatyzacji do wszystkich rodzajów budynków mieszalnych i publicznych. Zapytaj o szegółową wycenę.'
-  cannonical='https://sawers.pl/klimatyzacja'
-  keywords='Klimatyzacja, montaż klimatyzacji, klimatyzacja w bloku'
+  title="Klimatyzacja i montaż klimatyzacji | Sawers Parczew"
+  description="Klimatyzacja Parczew - Zapewniamy profesjonalny montaż klimatyzacji do wszystkich rodzajów budynków mieszalnych i publicznych. Zapytaj o szegółową wycenę."
+  cannonical="https://sawers.pl/klimatyzacja"
+  keywords="Klimatyzacja, montaż klimatyzacji, klimatyzacja w bloku"
 >
   <Landing />
+  <AnimatedSectio items={items} />
   <SeoV1 />
   <SeoV2 />
 </Layout>

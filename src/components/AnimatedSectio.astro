@@ -1,0 +1,131 @@
+---
+import { Image } from "astro:assets";
+
+export interface Props {
+  items: { text: string; img: ImageMetadata }[];
+}
+
+const { items } = Astro.props as Props;
+---
+
+<div class="spaced-x relative">
+  <section
+    id="callout"
+    class="overflow-hidden text-center lg:text-left gap-5 p-5 font-light flex flex-col"
+  >
+    {
+      items.map(({ text, img }, index) => (
+        <div class={`callout-item ${index % 2 === 0 ? "reverse" : ""}`}>
+          {index % 2 !== 0 ? (
+            <>
+              <p
+                class="text-bbrand-100"
+                style="text-shadow: #ff5a02 0px 5px 30px;"
+              >
+                {text}
+              </p>
+              <Image
+                src={img}
+                alt={"Naklejka przyporządkowana do odpowiedniej sekcji"}
+              />
+            </>
+          ) : (
+            <>
+              <Image
+                src={img}
+                alt={"Naklejka przyporządkowana do odpowiedniej sekcji"}
+              />
+              <p
+                class="text-bbrand-100"
+                style="text-shadow: #ff5a02 0px 5px 30px;"
+              >
+                {text}
+              </p>
+            </>
+          )}
+        </div>
+      ))
+    }
+  </section>
+  <div id="ellipse" class="absolute w-full h-3/4 bottom-1/4 right-0 -z-10">
+  </div>
+
+  <style>
+    section > div {
+      flex-direction: column;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+
+      @media (min-width: 1024px) {
+        gap: 32px;
+        flex-direction: row;
+      }
+    }
+    section > div > p {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      order: 1;
+      strong {
+        font-weight: 500;
+      }
+      @media (min-width: 1024px) {
+        font-size: 2.5rem;
+        order: unset;
+      }
+    }
+    section > div > img {
+      order: 0;
+      max-height: 20vh;
+      width: auto;
+      aspect-ratio: 280 / 160;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      @media (min-width: 1024px) {
+        order: unset;
+      }
+    }
+  </style>
+
+  <script>
+    import { animate, scroll } from "motion";
+
+    function main() {
+      const rows = document.querySelectorAll("section#callout > div");
+      let i = 0;
+      for (const row of rows) {
+        const dirMul = i % 2 === 0 ? 1 : -1;
+        const animation = animate(row, {
+          opacity: [0.6, 1],
+          x: [`${50 * dirMul}%`, 0],
+        });
+
+        scroll(animation, {
+          target: row.parentElement!,
+          offset: ["start end", "start start"],
+        });
+
+        i++;
+      }
+    }
+
+    main();
+  </script>
+  <style>
+    #ellipse {
+      background: conic-gradient(
+        from 187.31deg at 53.06% 26.16%,
+        #0500b3 -20.13deg,
+        #199afc 15.67deg,
+        rgba(255, 33, 246, 0) 122.88deg,
+        rgba(125, 35, 240, 0) 273.47deg,
+        #0500b3 229.87deg,
+        #199afc 375.67deg
+      );
+      filter: blur(80px);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+  </style>
+</div>
