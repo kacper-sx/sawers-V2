@@ -1,20 +1,32 @@
 ---
-import Landing from '@/sections/Photovoltaics/Landing.astro'
-import Layout from '../layouts/Layout.astro'
-import SeoV1 from '@/sections/Photovoltaics/SeoV1.astro'
-import SeoV2 from '@/sections/Photovoltaics/SeoV2.astro'
+import co1 from "@/assets/photovoltaics/fotowoltaika2.webp";
+import co2 from "@/assets/photovoltaics/fotowoltaika3.webp";
+import Landing from "@/sections/Photovoltaics/Landing.astro";
+import SeoV1 from "@/sections/Photovoltaics/SeoV1.astro";
+import SeoV2 from "@/sections/Photovoltaics/SeoV2.astro";
+import Layout from "../layouts/Layout.astro";
+
+import AnimatedSectio from "@/components/AnimatedSectio.astro";
+
+const items = [
+  { text: "Projekty instalacji", img: co1 },
+  { text: "Montaż fotowoltaiki", img: co2 },
+  { text: "Konserwacja instalacji", img: co1 },
+  { text: "Dotacje fotowoltaiczne", img: co2 },
+];
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout
-  title='Fotowoltaika | Sawers Parczew'
-  description='Sawers Parczew'
-  cannonical='https://sawers.pl/fotowoltaika'
-  keywords='Fotowoltaika, Wycena fotowoltaiki, Montaż fotowoltaiki'
+  title="Fotowoltaika | Projekty i Montaż | Sawers Parczew"
+  description="Ofertujemy projekt, montaż i konserwację instalacji fotowolaicznych w Parczewie i okoliach. Zredukujmy wspólnie rachunki za prąd, dbając o ekologię."
+  cannonical="https://sawers.pl/fotowoltaika"
+  keywords="Fotowoltaika, Wycena fotowoltaiki, Montaż fotowoltaiki"
 >
   <Landing />
+  <AnimatedSectio items={items} />
   <SeoV1 />
   <SeoV2 />
 </Layout>
