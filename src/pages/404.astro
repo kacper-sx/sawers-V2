@@ -1,0 +1,41 @@
+---
+import background from '@/assets/background.svg'
+import Pill from '@/components/features/Pill.astro'
+import AppHeader from '@/components/AppHeader/AppHeader.astro'
+import AppFooter from '@/components/AppFooter.astro'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout title='404' description='404' keywords='404'>
+  <section
+    class='flex flex-col xl:flex-row gap-16 w-full md:h-screen bg-center bg-cover px-spaced pt-30 xl:pt-36 items-center justify-center overflow-hidden'
+    style={`background-image: url(${background.src})`}
+  >
+    <div
+      class='flex flex-col gap-8 xl:gap-12 items-center intersect:animate-fade-in-scale-index intersect-once'
+    >
+      <p
+        style='text-shadow: #ff5a02 0px 5px 30px;'
+        class='text-3xl xl:text-6xl font-bold text-bbrand-100 flex flex-col gap-4 text-center'
+      >
+        <span>STRONA O PODANYM ADRESIE</span>
+        <span style='text-shadow: #199afc 0px 5px 30px;' class='text-accent'
+          >NIE ISTNIEJE!</span
+        >
+      </p>
+      <p class='text-base xl:text-xl max-w-3xl text-center'>
+        Strona, której szukasz niestety nie istnieje. Wróć na stronę główną i
+        zacznij od nowa.
+      </p>
+      <div
+        class='flex gap-4 text-2xl font-semibold w-full justify-center items-center'
+      >
+        <a href='/'>
+          <Pill class='flex items-center rounded-full gap-4 px-4 xl:px-8 py-3'>
+            Strona główna
+          </Pill>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
