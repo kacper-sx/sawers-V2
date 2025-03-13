@@ -1,26 +1,26 @@
 ---
-import co1 from '@/assets/photovoltaics/fotowoltaika2.webp'
-import co2 from '@/assets/photovoltaics/fotowoltaika3.webp'
-import AnimatedSectio from '@/components/AnimatedSectio.astro'
-import Landing from '@/sections/Services/Landing.astro'
-import SeoV1 from '@/sections/Services/SeoV1.astro'
-import SeoV2 from '@/sections/Services/SeoV2.astro'
-import Layout from '../layouts/Layout.astro'
+import co1 from "@/assets/services/serwisy-klimatyzacji.webp";
+import co2 from "@/assets/services/serwisy-pomp.webp";
+import AnimatedSectio from "@/components/AnimatedSectio.astro";
+import Landing from "@/sections/Services/Landing.astro";
+import SeoV1 from "@/sections/Services/SeoV1.astro";
+import SeoV2 from "@/sections/Services/SeoV2.astro";
+import Layout from "../layouts/Layout.astro";
 const items = [
-  { text: 'Fachowa diagnostyka', img: co1 },
-  { text: 'Serwis klimatyzacji', img: co2 },
-  { text: 'Okresowe przeglądy', img: co1 },
-  { text: 'Przeglądy gwarancyjne', img: co2 },
-]
+  { text: "Fachowa diagnostyka", img: co2 },
+  { text: "Serwis klimatyzacji", img: co1 },
+  { text: "Okresowe przeglądy", img: co2 },
+  { text: "Przeglądy gwarancyjne", img: co1 },
+];
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout
-  title='Serwis klimatyzacji i pomp ciepła | Sawers Parczew'
-  description='Przeprowadzamy autoryzowane serwisy i przeglądy gwarancyjne klimatyzacji i pomp ciepła w Parczewie i okolach. Zapytaj o przegląd swojego urządzenia.'
-  cannonical='https://sawers.pl/serwisy'
-  keywords='Sawers Parczew'
+  title="Serwis klimatyzacji i pomp ciepła | Sawers Parczew"
+  description="Przeprowadzamy autoryzowane serwisy i przeglądy gwarancyjne klimatyzacji i pomp ciepła w Parczewie i okolach. Zapytaj o przegląd swojego urządzenia."
+  cannonical="https://sawers.pl/serwisy"
+  keywords="Sawers Parczew"
 >
   <Landing />
   <AnimatedSectio items={items} />

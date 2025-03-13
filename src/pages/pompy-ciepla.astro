@@ -1,26 +1,26 @@
 ---
-import co1 from '@/assets/photovoltaics/fotowoltaika2.webp'
-import co2 from '@/assets/photovoltaics/fotowoltaika3.webp'
-import AnimatedSectio from '@/components/AnimatedSectio.astro'
-import Landing from '@/sections/HeatPumps/Landing.astro'
-import SeoV1 from '@/sections/HeatPumps/SeoV1.astro'
-import SeoV2 from '@/sections/HeatPumps/SeoV2.astro'
-import Layout from '../layouts/Layout.astro'
+import co2 from "@/assets/heat-pumps/pompa-ciepla.webp";
+import co1 from "@/assets/homepage/klimatyzacja1.webp";
+import AnimatedSectio from "@/components/AnimatedSectio.astro";
+import Landing from "@/sections/HeatPumps/Landing.astro";
+import SeoV1 from "@/sections/HeatPumps/SeoV1.astro";
+import SeoV2 from "@/sections/HeatPumps/SeoV2.astro";
+import Layout from "../layouts/Layout.astro";
 const items = [
-  { text: 'Dobór urządzeń', img: co1 },
-  { text: 'Pompy ciepła', img: co2 },
-  { text: 'Powietrze-powietrze', img: co1 },
-  { text: 'Profesjonalny montaż', img: co2 },
-]
+  { text: "Dobór urządzeń", img: co1 },
+  { text: "Pompy ciepła", img: co2 },
+  { text: "Powietrze-powietrze", img: co1 },
+  { text: "Profesjonalny montaż", img: co2 },
+];
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout
-  title='Pompy ciepła i montaż pomp ciepła | Sawers Parczew'
-  description='Oferujemy energooszczędne pompy ciepła powietrze-powietrze, razem z montażem w Parczewie i okolicach. Zacznij z nami elologiczne ogrzewanie budynku.'
-  cannonical='https://sawers.pl/pompy-ciepla'
-  keywords='Pompy ciepła powietrze-powietrze'
+  title="Pompy ciepła i montaż pomp ciepła | Sawers Parczew"
+  description="Oferujemy energooszczędne pompy ciepła powietrze-powietrze, razem z montażem w Parczewie i okolicach. Zacznij z nami elologiczne ogrzewanie budynku."
+  cannonical="https://sawers.pl/pompy-ciepla"
+  keywords="Pompy ciepła powietrze-powietrze"
 >
   <Landing />
   <AnimatedSectio items={items} />
