@@ -1,72 +1,67 @@
 ---
-import background from '@/assets/background.svg'
-import Breadcrumbs from '@/components/features/Breadcrumbs.astro'
-import P1 from '@/assets/homepage/monitoring.avif'
-import P2 from '@/assets/homepage/monitoring2.webp'
-import Pill from '@/components/features/Pill.astro'
-import { Image } from 'astro:assets'
+import background from "@/assets/background.svg";
+import P1 from "@/assets/homepage/monitoring.avif";
+import P2 from "@/assets/homepage/monitoring2.webp";
+import Breadcrumbs from "@/components/features/Breadcrumbs.astro";
+import Pill from "@/components/features/Pill.astro";
+import { Image } from "astro:assets";
 ---
 
 <section
-  class='flex flex-col xl:flex-row gap-8 xl:gap-16 w-full md:h-screen bg-center bg-cover px-spaced pb-30 xl:pb-36 items-center justify-center overflow-hidden rotate-180'
+  class="flex flex-col xl:flex-row gap-8 xl:gap-16 w-full md:h-screen bg-center bg-cover px-spaced pb-30 xl:pb-36 items-center justify-center overflow-hidden rotate-180"
   style={`background-image: url(${background.src})`}
 >
   <div
-    class='flex relative intersect:animate-fade-in-scale-index intersect-once'
+    class="flex relative intersect:animate-fade-in-scale-index intersect-once"
   >
     <Image
       src={P1}
-      alt={'Kamery przemysłowe rejestrujące obraz, zamontowane na słupie.'}
-      loading={'eager'}
-      fetchpriority={'high'}
-      class={'rounded-2xl xl:max-w-4xl double-brand-clip rotate-180'}
+      alt={"Kamery przemysłowe rejestrujące obraz, zamontowane na słupie."}
+      loading={"eager"}
+      fetchpriority={"high"}
+      class={"rounded-2xl xl:max-w-4xl double-brand-clip rotate-180"}
       widths={[400, 600, 800, 1000, 1200, 1600, 2000]}
-      sizes='(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px'
+      sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px"
     />
     <Image
       src={P2}
-      alt={'Grafika centrum logistycznego monitoringu.'}
-      loading={'eager'}
-      fetchpriority={'high'}
-      class={'absolute -bottom-24 -right-16 hidden xl:block xl:max-w-xs rotate-180'}
+      alt={"Grafika centrum logistycznego monitoringu."}
+      loading={"eager"}
+      fetchpriority={"high"}
+      class={"absolute -bottom-24 -right-16 hidden xl:block xl:max-w-xs rotate-180"}
     />
   </div>
   <div
-    class='flex flex-col xl:gap-12 gap-8 items-center xl:items-start rotate-180 intersect:animate-fade-in-scale-index intersect-once'
+    class="flex flex-col xl:gap-12 gap-8 items-center xl:items-start rotate-180 intersect:animate-fade-in-scale-index intersect-once"
   >
     <Breadcrumbs
       breadcrumbs={[
-        { href: '/', children: 'Sawers' },
-        { href: '/monitoring', children: 'Monitoring' },
+        { href: "/", children: "Sawers" },
+        { href: "/monitoring", children: "Monitoring" },
       ]}
     />
-    <h1 class='font-semibold text-center'>
+    <h1 class="font-semibold text-center">
       Monitoring i kamery przemysłowe Parczew
     </h1>
     <p
-      style='text-shadow: #ff5a02 0px 5px 30px;'
-      class='text-3xl xl:text-6xl font-bold text-bbrand-100 flex flex-col gap-4 text-center xl:text-start'
+      style="text-shadow: #ff5a02 0px 5px 30px;"
+      class="text-3xl xl:text-6xl font-bold text-bbrand-100 flex flex-col gap-4 text-center xl:text-start"
     >
       <span>BEZPIECZNY DOM GDY NIKOGO NIE MA?</span>
-      <span style='text-shadow: #199afc 0px 5px 30px;' class='text-accent'
+      <span style="text-shadow: #199afc 0px 5px 30px;" class="text-accent"
         >MONITORING TO GWARANCJA 24/7!</span
       >
     </p>
-    <p class='text-base xl:text-xl max-w-3xl text-center xl:text-start'>
+    <p class="text-base xl:text-xl max-w-3xl text-center xl:text-start">
       Często wyjeżdżasz i zostawiasz dom lub inne miejsce bez opieki? Chcesz
       wiedzieć co się dzieje na posesji, w każdej chwili i z dowolnego miejsca w
       kraju? Wypróbuj oferowany u nas system monitoringu!
     </p>
     <div
-      class='flex gap-4 text-2xl font-semibold w-full justify-center items-center xl:justify-start'
+      class="flex gap-4 text-2xl font-semibold w-full justify-center items-center xl:justify-start"
     >
-      <a href='/fotowoltaika#pricing'>
-        <Pill class='flex items-center rounded-full gap-4 px-4 xl:px-8 py-3'>
-          Wycena
-        </Pill>
-      </a>
-      <a href='/kontakt'>
-        <Pill class='flex items-center rounded-full gap-4 px-4 xl:px-8 py-3'>
+      <a href="/kontakt">
+        <Pill class="flex items-center rounded-full gap-4 px-4 xl:px-8 py-3">
           Skontakuj się
         </Pill>
       </a>
