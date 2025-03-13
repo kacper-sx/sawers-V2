@@ -1,0 +1,51 @@
+---
+import Whaves from "@/components/Whaves.astro";
+import { Icon } from "astro-icon/components";
+
+const IconData = [
+  "cooper-hunter",
+  "rotenso",
+  "solar-edge",
+  "fronius",
+  "hyundai",
+  "mitsubishi",
+  "dahua",
+  "lg",
+  "fujitsu",
+  "bcs",
+];
+---
+
+<section class="relative rounded-tr-2xl rounded-bl-2xl">
+  <Whaves />
+  <div
+    class="bg-bbrand-50 lg:min-h-[70vh] px-4 md:px-16 xl:px-32 flex flex-col gap-8 lg:gap-16 py-8 lg:py-16 items-center"
+  >
+    <h2
+      class="font-semibold text-2xl text-center lg:text-4xl max-w-4xl intersect:animate-fade-in-scale intersect-once"
+    >
+      <span style="text-shadow: #199afc 0px 5px 30px;" class="text-accent"
+        >Produkty chłodniczne i odnawialne źródła energii<span>
+          <span
+            style="text-shadow: #ff5a02 0px 5px 30px;"
+            class="text-bbrand-100">renomowanych producentów</span
+          >
+        </span>
+      </span>
+    </h2>
+    <div
+      class="flex flex-wrap w-full *:p-12 *:h-32 *:min-w-[150px] lg:*:min-w-[250px] *:bg-white *:flex-1 gap-2 intersect:animate-fade-in-scale intersect-once"
+    >
+      {
+        IconData.map((icon) => (
+          <div class="flex items-center justify-center rounded-2xl">
+            <Icon
+              name={icon}
+              class="h-full min-h-[100px] w-max object-contain"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
