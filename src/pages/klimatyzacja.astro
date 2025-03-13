@@ -1,12 +1,12 @@
 ---
+import co2 from "@/assets/air-conditioning/klimatyzacja2.webp";
+import co1 from "@/assets/air-conditioning/klimatyzacja3.webp";
 import AnimatedSectio from "@/components/AnimatedSectio.astro";
+import CTA from "@/components/CTA.astro";
 import Landing from "@/sections/AirCondition/Landing.astro";
 import SeoV1 from "@/sections/AirCondition/SeoV1.astro";
 import SeoV2 from "@/sections/AirCondition/SeoV2.astro";
 import Layout from "../layouts/Layout.astro";
-
-import co2 from "@/assets/air-conditioning/klimatyzacja2.webp";
-import co1 from "@/assets/air-conditioning/klimatyzacja3.webp";
 
 const items = [
   { text: "Dobór urządzeń", img: co1 },
@@ -29,4 +29,5 @@ const items = [
   <AnimatedSectio items={items} />
   <SeoV1 />
   <SeoV2 />
+  <CTA />
 </Layout>
