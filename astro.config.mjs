@@ -8,6 +8,14 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sawers.pl',
+  redirects: {
+    '/services': '/',
+    '/contact': '/kontakt',
+    '/about-us': '/',
+    '/certificates': '/',
+    '/privacy-policy': '/',
+    
+  },
   vite: {
     plugins: [tailwindcss()]
   },
