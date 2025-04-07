@@ -91,7 +91,6 @@ const { title, description, cannonical, keywords } = Astro.props as Props
       defer
       src='https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js'
     ></script>
-    <!-- Google Tag Manager -->
     <script>
       ;(function (w, d, s, l, i) {
         w[l] = w[l] || []
@@ -105,6 +104,18 @@ const { title, description, cannonical, keywords } = Astro.props as Props
       })(window, document, 'script', 'dataLayer', 'GTM-T87S8TM9')
     </script>
     <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-E7ZT6XFLR0'
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-E7ZT6XFLR0')
+    </script>
   </head>
   <body class='overflow-x-hidden'>
     <Splash />
