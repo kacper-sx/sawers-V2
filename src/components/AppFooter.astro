@@ -1,39 +1,40 @@
 ---
-import { Icon } from "astro-icon/components";
-import { navData } from "./AppHeader/navData";
+import { Icon } from 'astro-icon/components'
+import { navData } from './AppHeader/navData'
+import CookieConsent from './features/CookieConsent/CookieConsent.astro'
 const FooterContactData = [
   {
-    icon: "lucide:map-pin",
-    text: "11 Listopada 66/23, Parczew",
-    link: "https://maps.app.goo.gl/gq5U532drUFnKUaL8",
+    icon: 'lucide:map-pin',
+    text: '11 Listopada 66/23, Parczew',
+    link: 'https://maps.app.goo.gl/gq5U532drUFnKUaL8',
   },
   {
-    icon: "lucide:phone",
-    text: "+48 606 136 448",
-    link: "tel:+48606136448",
+    icon: 'lucide:phone',
+    text: '+48 606 136 448',
+    link: 'tel:+48606136448',
   },
   {
-    icon: "lucide:mail",
-    text: "ser2332@wp.pl",
-    link: "mailto:ser2332@wp.pl",
+    icon: 'lucide:mail',
+    text: 'ser2332@wp.pl',
+    link: 'mailto:ser2332@wp.pl',
   },
-];
+]
 ---
 
 <footer
-  id="footer"
-  class="flex flex-col gap-8 pt-12 pb-4 px-spaced border-bbrand-100 relative justify-center items-center w-full"
+  id='footer'
+  class='flex flex-col gap-8 pt-12 pb-4 px-spaced border-bbrand-100 relative justify-center items-center w-full'
 >
-  <div id="ellipse" class="absolute w-full h-3/4 bottom-1/4 right-0 -z-10">
+  <div id='ellipse' class='absolute w-full h-3/4 bottom-1/4 right-0 -z-10'>
   </div>
 
-  <div class="flex flex-col gap-8 lg:flex-row justify-between w-full">
-    <div class="flex flex-col gap-4">
+  <div class='flex flex-col gap-8 lg:flex-row justify-between w-full'>
+    <div class='flex flex-col gap-4'>
       {
         FooterContactData.map((item) => (
-          <div class="flex gap-4 items-center">
-            <Icon name={item.icon} class="w-8 h-8 text-bbrand-100" />
-            <a class="font-semibold" href={item.link}>
+          <div class='flex gap-4 items-center'>
+            <Icon name={item.icon} class='w-8 h-8 text-bbrand-100' />
+            <a class='font-semibold' href={item.link}>
               {item.text}
             </a>
           </div>
@@ -41,27 +42,27 @@ const FooterContactData = [
       }
     </div>
     <a
-      href="/"
-      class="text-center justify-center items-center border-2 rounded-2xl border-bbrand-100 px-3 py-1 h-max"
+      href='/'
+      class='text-center justify-center items-center border-2 rounded-2xl border-bbrand-100 px-3 py-1 h-max'
     >
       <span
-        class="text-bbrand-100 bg-none font-bold text-5xl md:text-8xl tracking-tight"
+        class='text-bbrand-100 bg-none font-bold text-5xl md:text-8xl tracking-tight'
       >
         Sawers
       </span>
     </a>
     <div
-      class="flex gap-0 justify-between md:gap-16 flex-row md:justify-center text-base xl:text-lg font-semibold w-full md:w-max md:text-right"
+      class='flex gap-0 justify-between md:gap-16 flex-row md:justify-center text-base xl:text-lg font-semibold w-full md:w-max md:text-right'
     >
-      <div class="flex flex-col gap-4">
-        <a href="/">Strona główna</a>
+      <div class='flex flex-col gap-4'>
+        <a href='/'>Strona główna</a>
         {
           navData
             .slice(4, 7)
             .map((item) => <a href={item.href}>{item.title}</a>)
         }
       </div>
-      <div class="flex flex-col gap-4">
+      <div class='flex flex-col gap-4'>
         {
           navData
             .slice(0, 4)
@@ -71,15 +72,15 @@ const FooterContactData = [
     </div>
   </div>
   <div
-    class="flex flex-col lg:flex-row lg:gap-8 gap-4 justify-between text-sm font-medium w-full"
+    class='flex flex-col lg:flex-row lg:gap-8 gap-4 justify-between text-sm font-medium w-full'
   >
     <p>Copyright &copy; {new Date().getFullYear()} Sawers Saweczko Robert</p>
-    <!-- <CookieConsent /> -->
+    <CookieConsent />
     <p>
       Realizacja -
       <a
-        class="text-bbrand-100 underline underline-offset-3 font-semibold"
-        href=""
+        class='text-bbrand-100 underline underline-offset-3 font-semibold'
+        href=''
       >
         kacper-sx</a
       >
