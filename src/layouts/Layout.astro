@@ -18,6 +18,61 @@ const { title, description, cannonical, keywords } = Astro.props as Props
 <!doctype html>
 <html lang='pl'>
   <head>
+    <!-- <script
+      is:inline
+      src="https://www.googletagmanager.com/gtag/js?id=G-E7ZT6XFLR0"></script>
+
+    <script>
+      import {
+        SERVICE_AD_PERSONALIZATION,
+        SERVICE_AD_STORAGE,
+        SERVICE_AD_USER_DATA,
+        SERVICE_ANALYTICS_STORAGE,
+        SERVICE_FUNCTIONALITY_STORAGE,
+        SERVICE_PERSONALIZATION_STORAGE,
+        SERVICE_SECURITY_STORAGE,
+      } from "@/components/features/CookieConsent/CookieConsentConfig";
+
+      declare global {
+        interface Window {
+          dataLayer: Record<string, any>[];
+          gtag: (...args: any[]) => void;
+        }
+      }
+
+      // This is the important part!
+      document.addEventListener("astro:page-load", () => {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag(...args: any[]) {
+          window.dataLayer.push(arguments);
+        };
+        window.gtag("js", new Date());
+        window.gtag("consent", "default", {
+          [SERVICE_AD_STORAGE]: "denied",
+          [SERVICE_AD_USER_DATA]: "denied",
+          [SERVICE_AD_PERSONALIZATION]: "denied",
+          [SERVICE_ANALYTICS_STORAGE]: "denied",
+          [SERVICE_FUNCTIONALITY_STORAGE]: "denied",
+          [SERVICE_PERSONALIZATION_STORAGE]: "denied",
+          [SERVICE_SECURITY_STORAGE]: "denied",
+        });
+        window.gtag("config", "G-E7ZT6XFLR0");
+      });
+    </script> -->
+    <!-- Google Tag Manager -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-T87S8TM9')
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/x-icon' href='/favicon.ico' />
@@ -91,7 +146,6 @@ const { title, description, cannonical, keywords } = Astro.props as Props
       defer
       src='https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js'
     ></script>
-    <!-- Google Tag Manager -->
     <script>
       ;(function (w, d, s, l, i) {
         w[l] = w[l] || []
@@ -102,11 +156,32 @@ const { title, description, cannonical, keywords } = Astro.props as Props
         j.async = true
         j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
         f.parentNode.insertBefore(j, f)
-      })(window, document, 'script', 'dataLayer', 'GTM-NP8K8J55')
+      })(window, document, 'script', 'dataLayer', 'GTM-T87S8TM9')
     </script>
     <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-E7ZT6XFLR0'
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-E7ZT6XFLR0')
+    </script>
   </head>
   <body class='overflow-x-hidden'>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src='https://www.googletagmanager.com/ns.html?id=GTM-T87S8TM9'
+        height='0'
+        width='0'
+        style='display:none;visibility:hidden'></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
     <Splash />
     <AppHeader />
 
@@ -116,21 +191,21 @@ const { title, description, cannonical, keywords } = Astro.props as Props
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
-        src='https://www.googletagmanager.com/ns.html?id=GTM-NP8K8J55'
+        src='https://www.googletagmanager.com/ns.html?id=GTM-T87S8TM9'
         height='0'
         width='0'
         style='display:none;visibility:hidden'></iframe></noscript
     >
     <!-- End Google Tag Manager (noscript) -->
   </body>
-</html>
 
-<script>
-  import Lenis from 'lenis'
-  declare global {
-    interface Window {
-      lenis: Lenis
+  <script>
+    import Lenis from 'lenis'
+    declare global {
+      interface Window {
+        lenis: Lenis
+      }
     }
-  }
-  window.lenis = new Lenis({ autoRaf: true })
-</script>
+    window.lenis = new Lenis({ autoRaf: true })
+  </script>
+</html>
