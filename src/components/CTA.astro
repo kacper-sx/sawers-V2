@@ -1,39 +1,41 @@
 ---
-import Pill from "@/components/features/Pill.astro";
+import Pill from '@/components/features/Pill.astro'
 ---
 
-<section class="flex items-center justify-center px-spaced py-8 xl:py-16">
+<section class='flex items-center justify-center px-spaced py-8 xl:py-16'>
   <div
-    class="flex flex-col xl:p-8 p-4 relative overflow-hidden bg-bbrand-50 gap-8 max-w-5xl rounded-2xl shadow-lg shadow-accent intersect:animate-fade-in-scale intersect-once"
+    class='flex flex-col xl:p-8 p-4 relative overflow-hidden bg-bbrand-50 gap-8 max-w-5xl rounded-2xl shadow-lg shadow-accent intersect:animate-fade-in-scale intersect-once'
   >
     <div
-      class="absolute rounded-full bg-[#0500b3] blur-3xl opacity-40 bottom-12 right-16 w-xl h-20 rotate-3"
+      class='absolute rounded-full bg-[#0500b3] blur-3xl opacity-40 bottom-12 right-16 w-xl h-20 rotate-3'
     >
     </div>
     <div
-      class="absolute rounded-full bg-bbrand-100 blur-2xl bottom-8 right-8 size-12 z-10"
+      class='absolute rounded-full bg-bbrand-100 blur-2xl bottom-8 right-8 size-12 z-10'
     >
     </div>
 
-    <div class="flex flex-col xl:flex-row xl:gap-16 gap-8 items-center">
-      <h2 class="text-2xl xl:text-4xl font-semibold">
+    <div class='flex flex-col xl:flex-row xl:gap-16 gap-8 items-center'>
+      <h2 class='text-2xl xl:text-4xl font-semibold'>
         Bezpłatna <span
-          class="text-bbrand-100"
-          style="text-shadow: #ff5a02 0px 5px 30px;">wycena</span
-        > i <span style="text-shadow: #199afc 0px 5px 30px;" class="text-accent"
+          class='text-bbrand-100'
+          style='text-shadow: #ff5a02 0px 5px 30px;'>wycena</span
+        > i <span style='text-shadow: #199afc 0px 5px 30px;' class='text-accent'
           >dojazd</span
         > na terenie województwa lubelskiego
       </h2>
-      <p class="max-w-md text-base xl:text-xl z-10">
+      <p class='max-w-md text-base xl:text-xl z-10'>
         Jeśli masz plan na inwestycję w sprzęt chłodniczny lub odnawialne źródła
         energii, zamów bezpłatną wizję lokalną na lubelszczyźnie. Przyjedziemy,
         sprawdzimy z czym mamy do czynienia i podeślemy wycenę realizacji.
       </p>
     </div>
-    <div class="w-max hover:scale-110 transition-all duration-300">
+    <div class='w-max hover:scale-110 transition-all duration-300'>
       <Pill>
-        <a class="px-8 py-3 rounded-full font-semibold" href="/kontakt"
-          >Zamów konsultację</a
+        <a
+          id='contact-button-cta'
+          class='px-8 py-3 rounded-full font-semibold'
+          href='/kontakt'>Zamów konsultację</a
         >
       </Pill>
     </div>
