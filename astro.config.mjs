@@ -7,6 +7,8 @@ import react from '@astrojs/react';
 
 import sitemap from "@astrojs/sitemap";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sawers.pl',
@@ -45,5 +47,5 @@ export default defineConfig({
           "cctv"
         ],
       },
-    }), react(), sitemap()]
+    }), react(), sitemap(), mdx()]
 });

@@ -1,0 +1,135 @@
+---
+import Splash from '@/components/SplashScreen.astro'
+import '@/styles/global.css'
+import AppHeader from '@/components/AppHeader/AppHeader.astro'
+import SplashScreen from '@/components/SplashScreen.astro'
+import AppFooter from '@/components/AppFooter.astro'
+
+export interface Props {
+  title: string
+  description: string
+  cannonical?: string
+  keywords: string
+}
+
+const { title, description, cannonical, keywords } = Astro.props as Props
+---
+
+<!doctype html>
+<html lang='pl'>
+  <head>
+    <script
+      id='Cookiebot'
+      src='https://consent.cookiebot.com/uc.js'
+      data-cbid='de5a1090-a4b2-4589-9b56-debb0b196959'
+      data-blockingmode='auto'
+      type='text/javascript'></script>
+    <!-- <script
+      is:inline
+      src='https://www.googletagmanager.com/gtag/js?id=G-FZEKY8MTDS'></script>
+
+    <script>
+      import {
+        SERVICE_AD_PERSONALIZATION,
+        SERVICE_AD_STORAGE,
+        SERVICE_AD_USER_DATA,
+        SERVICE_ANALYTICS_STORAGE,
+        SERVICE_FUNCTIONALITY_STORAGE,
+        SERVICE_PERSONALIZATION_STORAGE,
+        SERVICE_SECURITY_STORAGE,
+      } from '@/components/features/CookieConsent/CookieConsentConfig'
+
+      declare global {
+        interface Window {
+          dataLayer: Record<string, any>[]
+          gtag: (...args: any[]) => void
+        }
+      }
+
+      // This is the important part!
+      document.addEventListener('astro:page-load', () => {
+        window.dataLayer = window.dataLayer || []
+        window.gtag = function gtag(...args: any[]) {
+          window.dataLayer.push(arguments)
+        }
+        window.gtag('js', new Date())
+        window.gtag('consent', 'default', {
+          [SERVICE_AD_STORAGE]: 'denied',
+          [SERVICE_AD_USER_DATA]: 'denied',
+          [SERVICE_AD_PERSONALIZATION]: 'denied',
+          [SERVICE_ANALYTICS_STORAGE]: 'denied',
+          [SERVICE_FUNCTIONALITY_STORAGE]: 'denied',
+          [SERVICE_PERSONALIZATION_STORAGE]: 'denied',
+          [SERVICE_SECURITY_STORAGE]: 'denied',
+        })
+        window.gtag('config', 'G-FZEKY8MTDS')
+      })
+    </script> -->
+
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+
+    <meta name='robots' content='noindex, nofollow' />
+    <meta name='generator' content={Astro.generator} />
+    <link rel='canonical' href={cannonical} />
+    <title>{title}</title>
+    <meta name='description' content={description} />
+    <meta name='keywords' content={keywords} />
+
+    <script
+      defer
+      src='https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js'
+    ></script>
+    <!-- Google Tag Manager -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-NP8K8J55')
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body class='overflow-x-hidden'>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src='https://www.googletagmanager.com/ns.html?id=GTM-NP8K8J55'
+        height='0'
+        width='0'
+        style='display:none;visibility:hidden'></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+    <Splash />
+    <AppHeader />
+
+    <slot />
+
+    <AppFooter />
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src='https://www.googletagmanager.com/ns.html?id=GTM-T87S8TM9'
+        height='0'
+        width='0'
+        style='display:none;visibility:hidden'></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+  </body>
+
+  <script>
+    import Lenis from 'lenis'
+    declare global {
+      interface Window {
+        lenis: Lenis
+      }
+    }
+    window.lenis = new Lenis({ autoRaf: true })
+  </script>
+</html>

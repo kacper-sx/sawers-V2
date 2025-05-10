@@ -1,0 +1,34 @@
+---
+import co2 from '@/assets/air-conditioning/klimatyzacja2.webp'
+import co1 from '@/assets/air-conditioning/klimatyzacja3.webp'
+import AnimatedSectio from '@/components/AnimatedSectio.astro'
+import CTA from '@/components/CTA.astro'
+import LandingLublin from '@/sections/AirCondition/Landing-Lublin.astro'
+import SeoV1 from '@/sections/AirCondition/SeoV1.astro'
+import SeoV2 from '@/sections/AirCondition/SeoV2.astro'
+import LayoutLublin from '../layouts/Layout.astro'
+import SeoV1Lublin from '../sections/AirCondition/SeoV1Lublin.astro'
+
+const items = [
+  { text: 'Dobór urządzeń', img: co1 },
+  { text: 'Sprzedaż klimatyzacji', img: co2 },
+  { text: 'Montaż klimatyzacji', img: co1 },
+  { text: 'Serwis klimatyzacji', img: co2 },
+]
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<LayoutLublin
+  title='Sprzedaż i montaż klimatyzacji | Lublin'
+  description='Sprzedaż i montaż systemów klimatyzacji Lublin. Klimatyzacja split i multisplit do budynków jednorodzinnych oraz bloku. Odbież już dziś darmową wycenę.'
+  cannonical='https://sawers.pl/klimatyzacja-lublin/'
+  keywords='Montaż klimatyzacji Lublin'
+>
+  <LandingLublin />
+  <AnimatedSectio items={items} />
+  <SeoV1Lublin />
+
+  <CTA />
+</LayoutLublin>

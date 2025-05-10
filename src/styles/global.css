@@ -48,6 +48,12 @@
   @apply bg-clip-text text-transparent bg-gradient-to-l from-bbrand-100 to-accent;
 }
 
+.aboreto-regular {
+  font-family: "Aboreto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @utility intersection {
   @apply intersect:animate-fade-in-scale
 }
